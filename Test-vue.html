@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>vueTest</title>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vueTest</title>
+    <script>
+    (function() {
+        var currClientWidth, fontValue, originWidth;
+        originWidth = 750;
+        __resize();
+        window.addEventListener("resize", __resize, false);
 
-
-<script src="js/vue.js"></script>
-
-<div id="app">
-<div v-if="seen">{{msg}}</div>
-<input type="text" v-model="msg">
-<abc :msg="msg"></abc>
-</div>
-
-
-<script>
-
-Vue.component('abc',{
-  props:{
-    msg:String
-  },
-  template:'<div>{{msg}}</div>'
-})
-
-
-  var app=new Vue({
-    el:'#app',
-    data:{
-      msg:'hello world!',
-      seen:true,
-      tools:[
-        { text: 'a'},
-        { text: 'b'},
-        { text: 'c'},
-      ]
-    },
-    methods:{
-      reversemsg:function(){
-        this.msg = this.msg.split('').reverse().join('')
-      }
+        function __resize() {
+            currClientWidth = document.documentElement.clientWidth;
+            if (currClientWidth > 1024) {
+                currClientWidth = 1024
+            }
+            if (currClientWidth > 768 && currClientWidth < 1024) {
+                currClientWidth = 768
+            }
+            if (currClientWidth < 320) {
+                currClientWidth = 320
+            }
+            fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
+            document.documentElement.style.fontSize = fontValue + "%"
+        }
+    })();
+    </script>
+    <script src="js/vue.js"></script>
+    <style>
+    body {
+        font-size: .3rem;
     }
-  })
-</script>
+    </style>
+</head>
 
-
+<body>
+    <div id="app">
+        <div v-for="(item,index) in todos">{{item.text}}</div>
+        <div>{{msg}}</div>
+        <div @click="reversemsg">reverse</div>
+        <div v-on:click="abcd">abcd</div>
+        <input type="text" v-model="msg">
+        <lin v-for="(x,index) in todos" :todo="x"></lin>
+    </div>
+    <script>
+    Vue.component('lin', {
+    	props:['todo'],
+        template: '<div>{{todo.text}}</div>'
+    })
+    var app = new Vue({
+        el: '#app',
+        data: {
+            todos: [{
+                text: '学习 JavaScript'
+            }, {
+                text: '学习 Vue'
+            }, {
+                text: '整个牛项目'
+            }],
+            msg: 'abc'
+        },
+        created(){
+        	console.log('created called '+this.msg)
+        },
+        methods: {
+            reversemsg() {
+                this.msg = this.msg.split('').reverse().join('')
+            },
+            abcd() {
+                this.msg = this.msg + this.msg
+            }
+        },
+        mounted(){},
+        updated(){},
+        destroyed(){}
+    })
+    </script>
 </body>
+
 </html>

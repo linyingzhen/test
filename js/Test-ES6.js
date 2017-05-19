@@ -1,5 +1,5 @@
-let arr1=[1,2]
 
-for(let x of arr1){
-	console.log(x)
-}
+let {a,b} = {a:1,b:2}
+
+console.log(a)
+
