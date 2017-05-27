@@ -34,50 +34,51 @@
     body {
         font-size: .3rem;
     }
+    
+    .box {
+        background: green;
+    }
+    
+    .red {
+        color: red;
+    }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <div v-for="(item,index) in todos">{{item.text}}</div>
-        <div>{{msg}}</div>
-        <div @click="reversemsg">reverse</div>
-        <div v-on:click="abcd">abcd</div>
-        <input type="text" v-model="msg">
-        <lin v-for="(x,index) in todos" :todo="x"></lin>
+
+
+    <div :style="styleObject">div</div>
+    <div :style="[styleObject,styleObject2]">div</div>
+
+
     </div>
     <script>
-    Vue.component('lin', {
-    	props:['todo'],
-        template: '<div>{{todo.text}}</div>'
-    })
     var app = new Vue({
         el: '#app',
         data: {
-            todos: [{
-                text: '学习 JavaScript'
-            }, {
-                text: '学习 Vue'
-            }, {
-                text: '整个牛项目'
-            }],
-            msg: 'abc'
-        },
-        created(){
-        	console.log('created called '+this.msg)
-        },
-        methods: {
-            reversemsg() {
-                this.msg = this.msg.split('').reverse().join('')
+            activeColor: 'red',
+            fontSize: 30,
+            styleObject:{
+                color:'red',
+                fontSize:'30px'
             },
-            abcd() {
-                this.msg = this.msg + this.msg
+            styleObject2:{
+                fontWeight:'bold'
             }
-        },
-        mounted(){},
-        updated(){},
-        destroyed(){}
+        }
+
     })
+    </script>
+    <script>
+    </script>
+    <script>
+    // setTimeout(function() {
+    //     if (!document.getElementById('abc')) {
+    //         console.log('abc is not')
+    //     }
+    // }, 2000)
     </script>
 </body>
 
