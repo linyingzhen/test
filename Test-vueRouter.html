@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test-vueRouter</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <router-link to="/aaa">go to aaa</router-link>
+            <router-link to="/bbb">go to bbb</router-link>
+        </div>
+        <router-view></router-view>
+    </div>
+    <script>
+    //定义路由组件
+    const Aaa = {
+        template: '<div>this is aaa</div>'
+    };
+    const Bbb = {
+        template: '<div>this is bbb</div>'
+    };
+
+    //定义路由
+    const routes = [{
+        path: '/aaa',
+        component: Aaa
+    }, {
+        path: '/bbb',
+        component: Bbb
+    }];
+
+    //创建路由实例
+    const router = new VueRouter({
+        routes
+    });
+
+    const app = new Vue({
+        router
+    }).$mount('#app');
+    </script>
+</body>
+
+</html>
