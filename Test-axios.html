@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test-axios</title>
+    <script src="js/axios.js"></script>
+</head>
+
+<body>
+    <script>
+    // 执行GET请求
+    axios.get('server/server-axios.php?id=123')
+        .then(function(response) {
+            console.log(response.data); //数据在这里
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+
+    axios.get('server/server-axios.php', {
+            params: {
+                id: '123456',
+                name: 'lin'
+            }
+        })
+        .then(function(response) {
+            console.log(response.data); //数据在这里
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+
+
+    // 执行POST请求
+    var params = new URLSearchParams();
+    params.append('c', '111');
+    params.append('d', 'postlin');
+    axios.post('server/server-axios.php', params)
+        .then(function(res) {
+            console.log(res.data);
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
+
+    // 执行多个并发请求
+    function getUserAccount() {
+        return axios.get('server/server-axios.php?id=fff');
+    }
+
+    function getUserPermissions() {
+        return axios.get('server/server-axios.php?id=ggg');
+    }
+
+    axios.all([getUserAccount(), getUserPermissions()])
+        .then(axios.spread(function(a, b) {
+            console.log(a.data);
+            console.log(b.data);
+            // Both requests are now complete
+        }));
+    </script>
+</body>
+
+</html>

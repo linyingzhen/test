@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test-jquery</title>
+	<script src="js/jquery.js"></script>
+</head>
+<body>
+
+
+<script>
+// json
+$.ajax({
+	url:"server/server-jquery.php",
+	type:"get",
+	dataType:"json",
+	async:true,
+	success:function(res){
+		console.log(res);
+		console.log(res.a,res.b,res.c);
+	}
+})
+
+
+/*
+	// jsonp
+	$.ajax({
+		url:"server/server-jquery.php?callback=xxx",
+		type:"post",
+		dataType:"jsonp",
+		jsonp:"callback",
+		async:true,
+		success:function(response){
+			console.log(response);
+			console.log(response.a,response.b,response.c);
+		}
+	})
+*/
+
+</script>
+	
+</body>
+</html>

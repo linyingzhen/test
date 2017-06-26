@@ -1,115 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>vueTest</title>
-    <script>
-    (function() {
-        var currClientWidth, fontValue, originWidth;
-        originWidth = 750;
-        __resize();
-        window.addEventListener("resize", __resize, false);
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>vueTest</title>
+		<script>
+			(function() {
+				var currClientWidth, fontValue, originWidth;
+				originWidth = 750;
+				__resize();
+				window.addEventListener("resize", __resize, false);
 
-        function __resize() {
-            currClientWidth = document.documentElement.clientWidth;
-            if (currClientWidth > 1024) {
-                currClientWidth = 1024
-            }
-            if (currClientWidth > 768 && currClientWidth < 1024) {
-                currClientWidth = 768
-            }
-            if (currClientWidth < 320) {
-                currClientWidth = 320
-            }
-            fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
-            document.documentElement.style.fontSize = fontValue + "%"
-        }
-    })();
-    </script>
-    <script src="js/vue.js"></script>
-    <style>
-    body {
-        font-size: .3rem;
-    }
-    
-    .box {
-        background: green;
-    }
-    
-    .red {
-        color: red;
-    }
-    </style>
-</head>
+				function __resize() {
+					currClientWidth = document.documentElement.clientWidth;
+					if(currClientWidth > 1024) {
+						currClientWidth = 1024
+					}
+					if(currClientWidth > 768 && currClientWidth < 1024) {
+						currClientWidth = 768
+					}
+					if(currClientWidth < 320) {
+						currClientWidth = 320
+					}
+					fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
+					document.documentElement.style.fontSize = fontValue + "%"
+				}
+			})();
+		</script>
+		<script src="js/vue.js"></script>
+		<style>
+			body {
+				font-size: .3rem;
+			}
+			
+			.box {
+				background: green;
+			}
+			
+			.red {
+				color: red;
+			}
+		</style>
+	</head>
 
-<body>
-    <div id="app">
-        <input type="checkbox" id="checkbox" v-model="checked">
-        <label for="checkbox">{{ checked }}</label>
-        <input type="checkbox" id="a" value="a" v-model="names">
-        <label for="a">a</label>
-        <input type="checkbox" id="b" value="b" v-model="names">
-        <label for="b">b</label>
-        <input type="checkbox" id="c" value="c" v-model="names">
-        <label for="c">c</label>
-        <div>{{names}}</div>
-        <input type="radio" id="one" value="one" v-model="picked">
-        <label for="one">one</label>
-        <br/>
-        <input type="radio" id="two" value="two" v-model="picked">
-        <label for="two">two</label>
-        <div>{{picked}}</div>
-        <select name="" id="" multiple v-model="selected2">
-            <option value="a">A</option>
-            <option value="b">B</option>
-            <option value="c">C</option>
-        </select>
-        <div>{{selected2}}</div>
-        <select name="" id="" v-model="selected">
-            <option v-for="x in options" :value="x.value">{{x.text}}</option>
-        </select>
-        <div>{{selected}}</div>
-        <select name="" id="" v-model="selected">
-            <option v-for="x in options" :value="x.value">{{x.text}}</option>
-        </select>
-        <div>{{selected}}</div>
-        <input type="text" v-model.lazy="msg">
-        <div>{{msg}}</div>
-        <input type="number" v-model.number="age">
-    </div>
-    <script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-            count: 0,
-            msg: '',
-            checked: false,
-            names: [],
-            picked: '',
-            selected: '',
-            selected2: [],
-            options: [{
-                text: 'one',
-                value: 'A'
-            }, {
-                text: 'two',
-                value: 'B'
-            }, {
-                text: 'three',
-                value: 'C'
-            }],
-            age: 0
-        },
-        methods: {
-            add(x) {
-                console.log(x)
-            }
-        }
-    })
-    </script>
-</body>
+	<body>
+		<div id="app">
+			<input type="checkbox" id="checkbox" v-model="checked">
+			<label for="checkbox">{{ checked }}</label>
+			<input type="checkbox" id="a" value="a" v-model="names">
+			<label for="a">a</label>
+			<input type="checkbox" id="b" value="b" v-model="names">
+			<label for="b">b</label>
+			<input type="checkbox" id="c" value="c" v-model="names">
+			<label for="c">c</label>
+			<div>{{names}}</div>
+			<input type="radio" id="one" value="one" v-model="picked">
+			<label for="one">one</label>
+			<br/>
+			<input type="radio" id="two" value="two" v-model="picked">
+			<label for="two">two</label>
+			<div>{{picked}}</div>
+			<select name="" id="" multiple v-model="selected2">
+				<option value="a">A</option>
+				<option value="b">B</option>
+				<option value="c">C</option>
+			</select>
+			<div>{{selected2}}</div>
+			<select name="" id="" v-model="selected">
+				<option v-for="x in options" :value="x.value">{{x.text}}</option>
+			</select>
+			<div>{{selected}}</div>
+			<select name="" id="" v-model="selected">
+				<option v-for="x in options" :value="x.value">{{x.text}}</option>
+			</select>
+			<div>{{selected}}</div>
+			<input type="text" v-model.lazy="msg">
+			<div>{{msg}}</div>
+			<input type="number" v-model.number="age">
+		</div>
+		<script>
+			var app = new Vue({
+				el: '#app',
+				data: {
+					count: 0,
+					msg: '',
+					checked: false,
+					names: [],
+					picked: '',
+					selected: '',
+					selected2: [],
+					options: [{
+						text: 'one',
+						value: 'A'
+					}, {
+						text: 'two',
+						value: 'B'
+					}, {
+						text: 'three',
+						value: 'C'
+					}],
+					age: 0
+				},
+				methods: {
+					add(x) {
+						console.log(x);
+					}
+				}
+			})
+		</script>
+	</body>
 
 </html>
