@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Text-list</title>
+    <script>
+    (function() {
+        var currClientWidth, fontValue, originWidth;
+        originWidth = 750;
+        __resize();
+        window.addEventListener("resize", __resize, false);
+
+        function __resize() {
+            currClientWidth = document.documentElement.clientWidth;
+            if (currClientWidth > 1024) {
+                currClientWidth = 1024
+            }
+            if (currClientWidth > 768 && currClientWidth < 1024) {
+                currClientWidth = 768
+            }
+            if (currClientWidth < 320) {
+                currClientWidth = 320
+            }
+            fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
+            document.documentElement.style.fontSize = fontValue + "%"
+        }
+    })();
+    </script>
+	<script src="js/list.js"></script>
+  <style>
+    body {
+      font-size: .3rem;
+    }
+  </style>
+</head>
+<body>
+
+<div id="hacker-list">
+
+  <input class="search" />
+  <span class="sort" data-sort="name">Sort by name</span>
+  <span class="sort" data-sort="city">Sort by city</span>
+
+  <ul class="list">
+   <li>
+     <h3 class="name">Jonny</h3>
+     <p class="city">Stockholm</p>
+   </li>
+   <li>
+     <h3 class="name">Jonas</h3>
+     <p class="city">Berlin</p>
+   </li>
+  </ul>
+</div>
+
+
+<script>
+
+var options = {
+  valueNames: [ 'name', 'city' ]
+};
+
+var hackerList = new List('hacker-list', options);
+
+
+</script>
+
+
+
+
+
+	
+</body>
+</html>

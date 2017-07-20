@@ -1,0 +1,49 @@
+< !DOCTYPE html >
+	<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test-react</title>
+    <link rel="stylesheet" href="">
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+    <script src="js/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- <script src="js/Test-React.js"></script> -->
+    <script type="text/babel">
+        const element = <h1>Hello, world!123</h1>;
+
+          ReactDOM.render(
+            element,
+            document.getElementById('root')
+          );
+
+
+
+        function formatName(user) {
+          return user.firstName + ' ' + user.lastName;
+        }
+
+        const user = {
+          firstName: 'Harper',
+          lastName: 'Perez'
+        };
+
+        const element = (
+          <h1>
+            Hello, {formatName(user)}!
+          </h1>
+        );
+
+        ReactDOM.render(
+          element,
+          document.getElementById('root')
+        );
+    </script>
+</body>
+
+</html>
