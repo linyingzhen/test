@@ -2,11 +2,25 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
     <title>Test-JS</title>
+    <script>
+        !function () {
+            function a() {
+                b = document.documentElement.clientWidth, b > 1024 && (b = 1024), b > 768 && 1024 > b && (b = 768), 320 > b && (b = 320), c = (625 * b / d).toFixed(2), document.documentElement.style.fontSize = c + "%"
+            }
+
+            let b, c, d;
+            d = 750, a(), window.addEventListener("resize", a, !1)
+        }();
+    </script>
+
 </head>
 
+
 <body>
+
 
 </body>
 
