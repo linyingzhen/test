@@ -7,39 +7,48 @@
     <title>html5基础页</title>
     <script>
     (function() {
-        let currClientWidth, fontValue, originWidth;
+        var currClientWidth, fontValue, originWidth;
         originWidth = 750;
         __resize();
         window.addEventListener("resize", __resize, false);
 
         function __resize() {
             currClientWidth = document.documentElement.clientWidth;
-            if (currClientWidth > 1024) {
-                currClientWidth = 1024
-            }
-            if (currClientWidth > 768 && currClientWidth < 1024) {
-                currClientWidth = 768
-            }
-            if (currClientWidth < 320) {
-                currClientWidth = 320
-            }
+            // if (currClientWidth > 1024) {
+            //     currClientWidth = 1024;
+            // }
+            // if (currClientWidth > 768 && currClientWidth < 1024) {
+            //     currClientWidth = 768;
+            // }
+            // if (currClientWidth < 320) {
+            //     currClientWidth = 320;
+            // }
             fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
-            document.documentElement.style.fontSize = fontValue + "%"
+            document.documentElement.style.fontSize = fontValue + "%";
         }
     })();
     </script>
-    <!--[if lt IE 9] >
+    <!-- [if lt IE 9] >
     <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
     <! [endif]-->
 </head>
 
 <body>
 
+<style>
+    body {
+        font-size: .3rem;
+        color:green;
+        background: #000;
+    }
+</style>
 
 
-
-
-
+<div class="box">
+    <p>pppppp</p>
+    <div>div</div>
+    <span>span</span>
+</div>
 
 
 
