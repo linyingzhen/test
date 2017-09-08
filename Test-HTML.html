@@ -3,11 +3,17 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="description" content="Free Web tutorials on HTML, CSS, XML" />
+    <meta name="keywords" content="HTML, CSS, XML" />
+    <base target="_blank">
     <title>Test-HTML</title>
-    <script>
+    <link rel="stylesheet" href="">
+    <style></style>
+    <script></script>
+    <!-- <script>
         !function(){function a(){b=document.documentElement.clientWidth,c=(625*b/d).toFixed(2),document.documentElement.style.fontSize=c+"%"}var b,c,d;d=750,a(),window.addEventListener("resize",a,!1)}();
-    </script>
-    <link rel="stylesheet" href="css/Test-CSS.css">
+    </script> -->
+    <!-- <link rel="stylesheet" href="css/Test-CSS.css"> -->
 </head>
 
 <body>
@@ -65,6 +71,102 @@
     <!--[if IE 8]>
     .... some HTML here ....
 	<![endif]-->
+
+    <!-- 表格 -->
+    <table>
+        <caption>caption</caption>
+        <thead>
+            <tr>
+                <th>thead th</th>
+                <th>th</th>
+                <th>th</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>tfoot td</td>
+                <td>td</td>
+                <td>td</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>tbody td</td>
+                <td>td</td>
+            </tr>
+            <tr>
+                <td>td</td>
+                <td>td</td>
+                <td>td</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 列表 -->
+    <!-- 无序列表 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+    <!-- 有序列表 -->
+    <ol>
+        <li>1</li>
+        <li>2</li>
+    </ol>
+    <!-- 定义列表 -->
+    <dl>
+        <dt>dt</dt>
+        <dd>dd</dd>
+        <dd>dd</dd>
+        <dt>dt</dt>
+        <dd>dd</dd>
+        <dd>dd</dd>
+    </dl>
+
+    <!-- 块元素 -->
+    <div>块元素：div h1 p ul table</div>
+
+    <!-- 内联元素 -->
+    <span>内联元素：span b td a img</span>
+
+    <!-- 传统布局 -->
+    <div id="header">header</div>
+    <div id="nav">nav</div>
+    <div id="section">section</div>
+    <div id="footer">footer</div>
+
+    <!-- html5布局 -->
+    <header>header</header>
+    <nav>nav</nav>
+    <section>section</section>
+    <article>article</article>
+    <aside>aside</aside>
+    <footer>footer</footer>
+    <details>details</details>
+    <summary>summary</summary>
+
+    <!-- 框架 -->
+    <iframe src="https://www.baidu.com/" width="1200" height="400" frameborder="0">iframe 用于在网页内显示网页。</iframe>
+
+    <!-- 脚本 -->
+    <!-- 定义客户端脚本。 -->
+    <script></script>
+    <!-- 为不支持客户端脚本的浏览器定义替代内容。 -->
+    <noscript></noscript>
+
+    <!-- 字符实体 -->
+    <div>小于号：&lt; &#60; 空格：&nbsp; 大于号：&gt; 和号：&amp; 引号：&quot; 撇号：&apos;</div>
+    <div>分：&cent; 镑：&pound; 元：&yen; 欧元：&euro; 小节：&sect; 版权（copyright）：&copy;</div>
+    <div>注册商标：&reg; 商标：&trade; 乘号：&times; 除号：&divide;</div>
+
+
+
+
+
+    
+
+
 </body>
 
 </html>
