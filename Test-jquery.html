@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <script>
+    <!-- <script>
     $.ajax({
         type: "POST",
         url: "",
@@ -17,12 +17,24 @@
             console.log(res);
         }
     });
-    </script>
+    </script> -->
 
 
 <script>
+	$.ajax({
+		url:"https://acs.m.taobao.com/h5/mtop.taobao.detail.getdetail/6.0/?appKey=12574478&t=1505437947238&sign=6925067905b77d8b47ad9b5df1cf0a63&api=mtop.taobao.detail.getdetail&v=6.0&ttid=2016%40taobao_h5_2.0.0&isSec=0&ecode=0&AntiFlood=true&AntiCreep=true&H5Request=true&type=jsonp&dataType=jsonp&callback=mtopjsonp1&data=%7B%22exParams%22%3A%22%7B%5C%22id%5C%22%3A%5C%22548398515379%5C%22%2C%5C%22abtest%5C%22%3A%5C%2230%5C%22%2C%5C%22rn%5C%22%3A%5C%22fb1101a11b1ad77bfcf1b26c8325fe44%5C%22%2C%5C%22sid%5C%22%3A%5C%222a91856710bc6734feda4c3e9a128c12%5C%22%7D%22%2C%22itemNumId%22%3A%22548398515379%22%7D&callback=xxx",
+		type:"get",
+		dataType:"jsonp",
+		jsonp:"callback",
+		async:true,
+		success:function(response){
+			console.log(response);
+			// console.log(response.a,response.b,response.c);
+		}
+	})
+
 // json
-$.ajax({
+/*$.ajax({
 	url:"server/server-jquery.php",
 	type:"get",
 	dataType:"json",
@@ -31,10 +43,10 @@ $.ajax({
 		console.log(res);
 		console.log(res.a,res.b,res.c);
 	}
-})
+})*/
 
 
-/*
+
 	// jsonp
 	$.ajax({
 		url:"server/server-jquery.php?callback=xxx",
@@ -47,7 +59,7 @@ $.ajax({
 			console.log(response.a,response.b,response.c);
 		}
 	})
-*/
+
 
 </script>
 	

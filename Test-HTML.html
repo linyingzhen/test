@@ -5,18 +5,32 @@
     <meta charset="utf-8">
     <meta name="description" content="Free Web tutorials on HTML, CSS, XML"/>
     <meta name="keywords" content="HTML, CSS, XML"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <base target="_blank">
     <title>Test-HTML</title>
     <link rel="stylesheet" href="">
-    <style></style>
+
     <script></script>
     <!-- <script>
         !function(){function a(){b=document.documentElement.clientWidth,c=(625*b/d).toFixed(2),document.documentElement.style.fontSize=c+"%"}var b,c,d;d=750,a(),window.addEventListener("resize",a,!1)}();
     </script> -->
+    <!-- <style>
+        body {
+            font:.3rem/1.1 Microsoft YaHei;
+        }
+    </style> -->
     <!-- <link rel="stylesheet" href="css/Test-CSS.css"> -->
 </head>
 
 <body>
+
+<div>
+    <div class="box fright">box1</div>
+    <div class="box fright">box2</div>
+    <div class="box fright">box3</div>
+</div>
+
+
 <!-- 标题 -->
 <h1>h1</h1>
 <h2>h2</h2>
@@ -29,7 +43,7 @@
 <!-- 链接 -->
 <a href="#">link</a>
 <!-- 图像 -->
-<img src="xxx.jpg" alt="xxx" width="30" height="30"/>
+<img src="" alt="xxx" width="30" height="30"/>
 <!-- 属性 -->
 <div id="att" class="att" title="att" style="color:green;">div</div>
 <!-- 水平线 -->
@@ -147,7 +161,7 @@
 <summary>summary</summary>
 
 <!-- 框架 -->
-<iframe src="https://www.baidu.com/" width="1200" height="400" frameborder="0">iframe 用于在网页内显示网页。</iframe>
+<iframe src="" width="1200" height="400" frameborder="0">iframe 用于在网页内显示网页。</iframe>
 
 <!-- 脚本 -->
 <!-- 定义客户端脚本。 -->
@@ -161,15 +175,19 @@
 <div>注册商标：&reg; 商标：&trade; 乘号：&times; 除号：&divide;</div>
 
 <!-- 表单 -->
-<!-- novalidate 不验证 -->
-<form action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8"
+<!-- novalidate 不验证 autofocus自动聚集-->
+<form id="form1" action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8"
       ectype="application/x-www-form-urlencoded" autocomplete="off">
     <fieldset>
         <legend>information</legend>
+        <label for="country_code">Country code: </label>
+<input type="text" name="country_code" id="country_code" pattern="[A-Za-z]{3}" title="Three letter country code" required>
         <label for="username">username:</label>
-        <input type="text" name="intxt" placeholder="aaa" id="username" value="text"/>
+        <!-- <input type="text" name="" id="" pattern="[0-9]{3}" title="只能是数字" size="3" maxlength="3" min="0" max="999" autocomplete="on" autofocus required> -->
+        <input type="text" name="" id="" pattern="[0-9]{3}" title="只能是数字" size="3" maxlength="3" min="0" max="999" autocomplete="on" required>
+        <input type="text" name="intxt" placeholder="aaa" id="username" value="text" readonly="readonly" />
         <label for="pwd">pwd:</label>
-        <input type="password" name="pwd" id="pwd">
+        <input type="password" name="pwd" id="pwd" disabled="disabled">
         <input type="radio" name="letter" id="" value="a"/>a
         <input type="radio" name="letter" id="" value="b"/>b
         <input type="checkbox" name="haved" id="">iphone5s
@@ -201,7 +219,7 @@
         <input type="time" name="user_time" id="">
         <input type="week" name="user_week" id="">
         <input type="email" name="user_email" id="" placeholder="email">
-        <input type="number" name="user_num" id="" placeholder="number" min="0" max="999999">
+        <input type="number" name="user_num" id="" placeholder="number" min="0" max="999999" step="1">
         <input type="range" name="range" id="" value="60">
         <input type="search" name="search" id="" placeholder="search">
         <input type="tel" name="phone" id="" placeholder="tel">
@@ -223,9 +241,15 @@
 
 
         <input type="submit" value="submit">
+        <input type="submit" formaction="/example/html5/demo_admin.asp" formenctype="multipart/form-data" formmethod="post" formtarget="_blank"  value="以管理员身份提交" formnovalidate />
+        <input type="image" src="http://www.w3school.com.cn/i/eg_submit.jpg" alt="Submit" width="48" height="48">
+
+        Select images: <input type="file" name="img" multiple>
 
     </fieldset>
 </form>
+
+<input type="text" name="lname" form="form1">
 
 
 <div>sj</div>
