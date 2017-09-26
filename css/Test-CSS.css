@@ -13,47 +13,58 @@ a {
     outline: none;
 }
 
-a:link {}
+a:link {
+}
 
-a:visited {}
+a:visited {
+}
 
-a:hover {}
+a:hover {
+}
 
-a:active {}
+a:active {
+}
 
 ul,
 li {
     list-style: none;
 }
+
 ul.square {
-	list-style-type: square;
+    list-style-type: square;
 }
+
 ul li.image {
-	list-style-image: url(xxx.gif);
-	list-style-position: inside;
+    list-style-image: url();
+    list-style-position: inside;
 }
+
 li.jianxue {
-	list-style: url(x.gif) square inside;
+    list-style: url() square inside;
 }
 
 table {
-	width: 100%;
-	border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
-table,th,td {
-	border:1px solid blue;
+
+table, th, td {
+    border: 1px solid blue;
 }
+
 th {
-	height: 50px;
+    height: 50px;
 }
+
 td {
-	height: 50px;
-	text-align: right;
-	vertical-align: bottom;
-	padding:15px;
+    height: 50px;
+    text-align: right;
+    vertical-align: bottom;
+    padding: 15px;
 }
-th,td {
-	color:white;
+
+th, td {
+    color: white;
 }
 
 .center {
@@ -82,7 +93,7 @@ input[type="button"] {
 
 .bg {
     background-color: #ccc;
-    background-image: url("a.jpg");
+    background-image: url("");
     background-repeat: repeat-y;
     background-position: center;
     /*background-position:50% 50%;*/
@@ -112,79 +123,81 @@ p {
 }
 
 .outline {
-	/* outline:1px solid red; */
-	outline-width: 1px;
-	outline-style: solid;
-	outline-color: red;
+    /* outline:1px solid red; */
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: red;
 }
 
 .box {
-	width: 70px;
-	height: 70px;
-	margin:10px;
-	padding:5px;
-	border: 1px solid #000;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #000;
 }
 
 .padding {
-	/* padding:10px; */
-	padding-top: 10px;
-	padding-right:10%;
-	padding-bottom: 1em;
-	padding-left: 1rem;
+    /* padding:10px; */
+    padding-top: 10px;
+    padding-right: 10%;
+    padding-bottom: 1em;
+    padding-left: 1rem;
 }
 
 .border {
-	border:1px solid black;
-	border-width: 2px;
-	border-style: dashed;
-	border-color: green;
+    border: 1px solid black;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: green;
 }
 
 .margin {
-	margin: 10px;
-	margin-top: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	margin-left: 10px;
+    margin: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .position {
-	position: relative;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 1;
-	overflow: hidden;
-	vertical-align: middle;
-	clip: rect(1px 2px 3px 4px);
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    vertical-align: middle;
+    clip: rect(1px 2px 3px 4px);
 }
 
 .relative {
-	position: relative;
-	top: 20px;
-	left: 20px;
+    position: relative;
+    top: 20px;
+    left: 20px;
 }
 
 .absolute {
-	position:absolute;
-	top:20px;
-	left: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 .zindex1 {
-	z-index: 1;
+    z-index: 1;
 }
+
 .zindex10 {
-	z-index: 10;
+    z-index: 10;
 }
 
 .fleft {
-	float: left;
+    float: left;
 }
+
 .fright {
-	float: right;
+    float: right;
 }
 
 h1 + p {
@@ -201,9 +214,30 @@ div:first-child {
 
 q:lang(no) {
 
-} 
+}
 
-p:first-line {}
-p:first-letter {}
-h1:before {}
-h1:after {}
+p:first-line {
+
+}
+
+p:first-letter {
+
+}
+
+h1:before {
+
+}
+
+h1:after {
+
+}
+
+.clear {
+    clear: left;
+    cursor: pointer;
+    display:none;
+    position: fixed;
+    visibility: hidden;
+}
+
+
