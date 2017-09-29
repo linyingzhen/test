@@ -35,12 +35,12 @@ ul.square {
 }
 
 ul li.image {
-    list-style-image: url();
+    list-style-image: url(xxx.gif);
     list-style-position: inside;
 }
 
 li.jianxue {
-    list-style: url() square inside;
+    list-style: url(x.gif) square inside;
 }
 
 table {
@@ -93,7 +93,7 @@ input[type="button"] {
 
 .bg {
     background-color: #ccc;
-    background-image: url("");
+    background-image: url("a.jpg");
     background-repeat: repeat-y;
     background-position: center;
     /*background-position:50% 50%;*/
