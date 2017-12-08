@@ -1128,6 +1128,45 @@ $d=mktime(9, 12, 31, 6, 10, 2015);
 echo "创建日期是 " . date("Y-m-d h:i:sa", $d);
 
 // strtotime() 用字符串来创建日期
+$d20170929153214=strtotime("10:38pm April 15 2015");
+echo "创建日期是 " . date("Y-m-d h:i:sa", $d20170929153214);
+
+// include 和 require 语句
+/*
+include 'filename';
+或
+require 'filename';
+*/
+include 'footer.php';
+include 'menu.php';
+
+/*
+操作文件
+PHP 拥有的多种函数可供创建、读取、上传以及编辑文件。
+readfile() 函数
+readfile() 函数读取文件，并把它写入输出缓冲。
+*/
+echo readfile("server/webdictionary.txt");
+
+// 文件打开/读取/读取
+// 打开文件的更好的方法是通过 fopen() 函数。此函数为您提供比 readfile() 函数更多的选项。
+// fopen()  读取文件 - fread()  关闭文件 - fclose()
+$myfile = fopen("server/webdictionary.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("server/webdictionary.txt"));
+fclose($myfile);
+
+//  读取单行文件 - fgets()
+/*
+检查 End-Of-File - feof()
+feof() 函数检查是否已到达 "end-of-file" (EOF)。
+feof() 对于遍历未知长度的数据很有用。
+*/
+
+/*
+读取单字符 - fgetc()
+fgetc() 函数用于从文件中读取单个字符。
+下例逐字符读取 "webdictionary.txt" 文件，直到 end-of-file：
+*/
 
 
    ?>

@@ -29,6 +29,11 @@
         }
     })();
     </script>
+    <style>
+        body {
+            font-size: .24rem;
+        }
+    </style>
     <script src="js/vue.js"></script>
 
 </head>
@@ -36,18 +41,62 @@
 <body>
 
 <div id="app">
-    <div>{{msg}}</div>
+    <my-component my-message="hello!123"></my-component>
+    <my-component my-message="hello!456"></my-component>
+    <!-- 为 设置键值 v-for必要 总是用 key 配合 v-for。 -->
     <ul>
-        <li v-for="x in numbers">{{x}}</li>
+      <li v-for="todo in todos" :key="todo.id">{{ todo.text }}</li>
     </ul>
+
 </div>
 
 <script>
+
+    // 组件名为多个单词 必要 组件名应该始终是多个单词的，根组件 App 除外
+    // 组件数据 必要 组件的 data 必须是一个函数
+    // Prop 定义 必要
+    // 当使用的不是字符串模板时，camelCase (驼峰式命名) 的 prop 需要转换为相对应的 kebab-case (短横线分隔式命名)
+    // 注册组件
+    Vue.component('my-component', {
+        data:function() {
+            return {
+                foo:'bar'
+            }
+        },
+        props: {
+          myMessage: String
+        },
+        methods:{
+            // 私有属性名 必要,在插件、混入等扩展中始终为自定义的私有属性使用 $_ 前缀。并附带一个命名空间以回避和其它作者的冲突 (比如 $_yourPluginName_)。
+            $_myGreatMixin_update: function () {
+                console.log(this.myMessage)
+            }
+        },
+        template: '<div v-on:click="$_myGreatMixin_update">A custom component! {{myMessage}}</div>'
+    })
+
+
+
+
     let app = new Vue({
         el:'#app',
-        data:{
-            msg:'abc',
-            numbers:[1,2,3]
+        // data:{
+        //     msg:'abc',
+        //     numbers:[1,2,3]
+        // }
+        data: function () {
+          return {
+            todos: [
+              {
+                id: 1,
+                text: '学习使用 v-for'
+              },
+              {
+                id: 2,
+                text: '学习使用 key'
+              }
+            ]
+          }
         }
     })
 </script>

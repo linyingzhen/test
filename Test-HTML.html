@@ -3,13 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Free Web tutorials on HTML, CSS, XML"/>
-    <meta name="keywords" content="HTML, CSS, XML"/>
+    <meta name="description" content="Free Web tutorials on HTML, CSS, XML" />
+    <meta name="keywords" content="HTML, CSS, XML" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <base target="_blank">
     <title>Test-HTML</title>
     <link rel="stylesheet" href="">
-
+    <style>
+    a,
+    img,
+    div,
+    b,
+    bdi,
+    big,
+    bdo,
+    blockquote,
+    cite,
+    code,
+    del {
+        padding: 5px;
+        margin: 5px;
+        border: 1px solid black;
+    }
+    </style>
     <script></script>
     <!-- <script>
         !function(){function a(){b=document.documentElement.clientWidth,c=(625*b/d).toFixed(2),document.documentElement.style.fontSize=c+"%"}var b,c,d;d=750,a(),window.addEventListener("resize",a,!1)}();
@@ -23,210 +39,200 @@
 </head>
 
 <body>
-
-<div>
-    <div class="box fright">box1</div>
-    <div class="box fright">box2</div>
-    <div class="box fright">box3</div>
-</div>
-
-
-<!-- 标题 -->
-<h1>h1</h1>
-<h2>h2</h2>
-<h3>h3</h3>
-<h4>h4</h4>
-<h5>h5</h5>
-<h6>h6</h6>
-<!-- 段落 -->
-<p>p</p>
-<!-- 链接 -->
-<a href="#">link</a>
-<!-- 图像 -->
-<img src="" alt="xxx" width="30" height="30"/>
-<!-- 属性 -->
-<div id="att" class="att" title="att" style="color:green;">div</div>
-<!-- 水平线 -->
-<hr/>
-<!-- 换行 -->
-<br/>
-<!-- 文本格式化标签 -->
-<h4>文本格式化标签:</h4>
-<b>b定义粗体文本</b>
-<big>big定义大号字</big>
-<em>em定义着重文字</em>
-<i>i定义斜体字</i>
-<small>small定义小号字</small>
-<strong>strong定义加重语气</strong>
-<sub>sub定义下标字</sub>
-<sup>sup定义上标字</sup>
-<ins>ins定义插入字</ins>
-<del>del定义删除字</del>
-<!-- “计算机输出”标签 -->
-<h4>“计算机输出”标签</h4>
-<code>code 定义计算机代码</code>
-<kbd>kbd 定义键盘码</kbd>
-<samp>samp 定义计算机代码样本</samp>
-<tt>tt 定义打字机代码</tt>
-<var>var 定义变量</var>
-<pre>pre  定义预格式文本</pre>
-<!-- 引用、引用和术语定义 -->
-<h4>引用、引用和术语定义</h4>
-<abbr title="abc">abbr 定义缩写</abbr>
-<acronym title="abc">acronym 定义首字母缩写</acronym>
-<address>address 定义地址</address>
-<bdo dir="ltr">bdo 定义文字方向</bdo>
-<bdo dir="rtl">bdo 定义文字方向</bdo>
-<blockquote>blockquote 定义长的引用</blockquote>
-<q>q 定义短的引用语</q>
-<cite>cite 定义引用、引证</cite>
-<dfn>dfn 定义一个定义项目</dfn>
-<!-- 条件注释 -->
-<!--[if IE 8]>
+    <!-- 标题 -->
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>h6</h6>
+    <!-- 段落 -->
+    <p>p</p>
+    <!-- 链接 -->
+    <a href="#">a link</a>
+    <!-- 图像 -->
+    <img src="" alt="img alt" width="30" height="30" />
+    <!-- 属性 -->
+    <div id="att" class="att" title="att" style="color:green;">div</div>
+    <!-- 水平线 -->
+    <hr/>
+    <!-- 换行 -->
+    <br/>
+    <!-- 文本格式化标签 -->
+    <h4>文本格式化标签:</h4>
+    <b>b定义粗体文本</b>
+    <bdi>bdi ie firefox 暂无用</bdi>
+    <big>big定义大号文本</big>
+    <em>em定义着重文字</em>
+    <i>i定义斜体字</i>
+    <small>small定义小号字</small>
+    <strong>strong定义加重语气</strong>
+    <sub>sub定义下标字</sub>
+    <sup>sup定义上标字</sup>
+    <ins>ins定义插入字</ins>
+    <del>del定义被删除文本</del>
+    <!-- “计算机输出”标签 -->
+    <h4>“计算机输出”标签</h4>
+    <code>code 定义计算机代码</code>
+    <kbd>kbd 定义键盘码</kbd>
+    <samp>samp 定义计算机代码样本</samp>
+    <tt>tt 定义打字机代码</tt>
+    <var>var 定义变量</var>
+    <pre>pre  定义预格式文本</pre>
+    <!-- 引用、引用和术语定义 -->
+    <h4>引用、引用和术语定义</h4>
+    <abbr title="这个很长很长的title这个很长很长的title">abbr 定义缩写</abbr>
+    <acronym title="这个很长很长的title这个很长很长的title">acronym 定义首字母缩写</acronym>
+    <address>address 定义文档作者或拥有者的联系信息</address>
+    <address>
+        Written by
+        <a href="mailto:webmaster@example.com">Donald Duck</a>.
+        <br> Visit us at:
+        <br> Example.com
+        <br> Box 564, Disneyland
+        <br> USA
+    </address>
+    <bdo dir="ltr">bdo 定义文字方向</bdo>
+    <bdo dir="rtl">bdo 定义文字方向</bdo>
+    <blockquote>
+        blockquote 定义长的引用,之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进（增加外边距），而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+    </blockquote>
+    <q>q 定义短的引用语</q>
+    <cite>cite 定义引用、引证</cite>
+    <dfn>dfn 定义一个定义项目</dfn>
+    <!-- 条件注释 -->
+    <!--[if IE 8]>
 .... some HTML here ....
 <![endif]-->
-
-<!-- 表格 -->
-<table>
-    <caption>caption</caption>
-    <thead>
-    <tr>
-        <th>thead th</th>
-        <th>th</th>
-        <th>th</th>
-    </tr>
-    </thead>
-    <tfoot>
-    <tr>
-        <td>tfoot td</td>
-        <td>td</td>
-        <td>td</td>
-    </tr>
-    </tfoot>
-    <tbody>
-    <tr>
-        <td></td>
-        <td>tbody td</td>
-        <td>td</td>
-    </tr>
-    <tr>
-        <td>td</td>
-        <td>td</td>
-        <td>td</td>
-    </tr>
-    </tbody>
-</table>
-
-<!-- 列表 -->
-<!-- 无序列表 -->
-<ul>
-    <li>1</li>
-    <li>2</li>
-</ul>
-<!-- 有序列表 -->
-<ol>
-    <li>1</li>
-    <li>2</li>
-</ol>
-<!-- 定义列表 -->
-<dl>
-    <dt>dt</dt>
-    <dd>dd</dd>
-    <dd>dd</dd>
-    <dt>dt</dt>
-    <dd>dd</dd>
-    <dd>dd</dd>
-</dl>
-
-<!-- 块元素 -->
-<div>块元素：div h1 p ul table</div>
-
-<!-- 内联元素 -->
-<span>内联元素：span b td a img</span>
-
-<!-- 传统布局 -->
-<div id="header">header</div>
-<div id="nav">nav</div>
-<div id="section">section</div>
-<div id="footer">footer</div>
-
-<!-- html5布局 -->
-<header>header</header>
-<nav>nav</nav>
-<section>section</section>
-<article>article</article>
-<aside>aside</aside>
-<footer>footer</footer>
-<details>details</details>
-<summary>summary</summary>
-
-<!-- 框架 -->
-<iframe src="" width="1200" height="400" frameborder="0">iframe 用于在网页内显示网页。</iframe>
-
-<!-- 脚本 -->
-<!-- 定义客户端脚本。 -->
-<script></script>
-<!-- 为不支持客户端脚本的浏览器定义替代内容。 -->
-<noscript></noscript>
-
-<!-- 字符实体 -->
-<div>小于号：&lt; &#60; 空格：&nbsp; 大于号：&gt; 和号：&amp; 引号：&quot; 撇号：&apos;</div>
-<div>分：&cent; 镑：&pound; 元：&yen; 欧元：&euro; 小节：&sect; 版权（copyright）：&copy;</div>
-<div>注册商标：&reg; 商标：&trade; 乘号：&times; 除号：&divide;</div>
-
-<!-- 表单 -->
-<!-- novalidate 不验证 autofocus自动聚集-->
-<form id="form1" action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8"
-      ectype="application/x-www-form-urlencoded" autocomplete="off">
-    <fieldset>
-        <legend>information</legend>
-        <label for="country_code">Country code: </label>
-<input type="text" name="country_code" id="country_code" pattern="[A-Za-z]{3}" title="Three letter country code" required>
-        <label for="username">username:</label>
-        <!-- <input type="text" name="" id="" pattern="[0-9]{3}" title="只能是数字" size="3" maxlength="3" min="0" max="999" autocomplete="on" autofocus required> -->
-        <input type="text" name="" id="" pattern="[0-9]{3}" title="只能是数字" size="3" maxlength="3" min="0" max="999" autocomplete="on" required>
-        <input type="text" name="intxt" placeholder="aaa" id="username" value="text" readonly="readonly" />
-        <label for="pwd">pwd:</label>
-        <input type="password" name="pwd" id="pwd" disabled="disabled">
-        <input type="radio" name="letter" id="" value="a"/>a
-        <input type="radio" name="letter" id="" value="b"/>b
-        <input type="checkbox" name="haved" id="">iphone5s
-        <input type="checkbox" name="haved" id="">iphone7
-        <select name="city" id="">
-            <option value="广州">广州</option>
-            <option selected="selected" value="深圳">深圳</option>
-            <option value="上海">上海</option>
-        </select>
-        <textarea name="intxtarea" id="" cols="30" rows="10">textarea</textarea>
-        <input type="button" value="input:button" onclick="alert('input button')">
-        <button type="button" onclick="alert('button')">button</button>
-        <input type="submit" value="submit">
-
-        <!-- html5 -->
-        <input list="numbs">
-        <datalist id="numbs">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </datalist>
-        <!-- html5 input -->
-        <div>html5 input:</div>
-        <input type="color" name="bg-color" id="">
-        <input type="date" name="user_data">
-        <input type="datetime" name="user_time" id="">
-        <input type="datetime-local" name="user_timelc" id="">
-        <input type="month" name="user_month" id="">
-        <input type="time" name="user_time" id="">
-        <input type="week" name="user_week" id="">
-        <input type="email" name="user_email" id="" placeholder="email">
-        <input type="number" name="user_num" id="" placeholder="number" min="0" max="999999" step="1">
-        <input type="range" name="range" id="" value="60">
-        <input type="search" name="search" id="" placeholder="search">
-        <input type="tel" name="phone" id="" placeholder="tel">
-        <input type="url" name="url" id="" placeholder="url">
-
-        <div>输入限制：</div>
-        <pre>
+    <!-- 表格 -->
+    <table>
+        <caption>caption</caption>
+        <thead>
+            <tr>
+                <th>thead th</th>
+                <th>th</th>
+                <th>th</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>tfoot td</td>
+                <td>td</td>
+                <td>td</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>tbody td</td>
+                <td>td</td>
+            </tr>
+            <tr>
+                <td>td</td>
+                <td>td</td>
+                <td>td</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- 列表 -->
+    <!-- 无序列表 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+    <!-- 有序列表 -->
+    <ol>
+        <li>1</li>
+        <li>2</li>
+    </ol>
+    <!-- 定义列表 -->
+    <dl>
+        <dt>dt</dt>
+        <dd>dd</dd>
+        <dd>dd</dd>
+        <dt>dt</dt>
+        <dd>dd</dd>
+        <dd>dd</dd>
+    </dl>
+    <!-- 块元素 -->
+    <div>块元素：div h1 p ul table</div>
+    <!-- 内联元素 -->
+    <span>内联元素：span b td a img</span>
+    <!-- 传统布局 -->
+    <div id="header">header</div>
+    <div id="nav">nav</div>
+    <div id="section">section</div>
+    <div id="footer">footer</div>
+    <!-- html5布局 -->
+    <header>header</header>
+    <nav>nav</nav>
+    <section>section</section>
+    <article>article</article>
+    <aside>aside</aside>
+    <footer>footer</footer>
+    <details>details</details>
+    <summary>summary</summary>
+    <!-- 框架 -->
+    <iframe src="Test-HTML.html" width="100" height="100" frameborder="0">iframe 用于在网页内显示网页。</iframe>
+    <!-- 脚本 -->
+    <!-- 定义客户端脚本。 -->
+    <script></script>
+    <!-- 为不支持客户端脚本的浏览器定义替代内容。 -->
+    <noscript></noscript>
+    <!-- 字符实体 -->
+    <div>小于号：&lt; &#60; 空格：&nbsp; 大于号：&gt; 和号：&amp; 引号：&quot; 撇号：&apos;</div>
+    <div>分：&cent; 镑：&pound; 元：&yen; 欧元：&euro; 小节：&sect; 版权（copyright）：&copy;</div>
+    <div>注册商标：&reg; 商标：&trade; 乘号：&times; 除号：&divide;</div>
+    <!-- 表单 -->
+    <!-- novalidate 不验证 autofocus自动聚集-->
+    <form id="form1" action="action_page.php" method="GET" target="_blank" accept-charset="UTF-8" ectype="application/x-www-form-urlencoded" autocomplete="off">
+        <fieldset>
+            <legend>information</legend>
+            <label for="country_code">Country code: </label>
+            <input type="text" name="country_code" id="country_code" pattern="[A-Za-z]{3}" title="Three letter country code" required>
+            <label for="username">username:</label>
+            <!-- <input type="text" name="" id="" pattern="[0-9]{3}" title="只能是数字" size="3" maxlength="3" min="0" max="999" autocomplete="on" autofocus required> -->
+            <input type="text" name="" id="" pattern="[0-9]{3}" title="只能是数字" size="3" maxlength="3" min="0" max="999" autocomplete="on" required>
+            <input type="text" name="intxt" placeholder="aaa" id="username" value="text" readonly="readonly" />
+            <label for="pwd">pwd:</label>
+            <input type="password" name="pwd" id="pwd" disabled="disabled">
+            <input type="radio" name="letter" id="" value="a" />a
+            <input type="radio" name="letter" id="" value="b" />b
+            <input type="checkbox" name="haved" id="">iphone5s
+            <input type="checkbox" name="haved" id="">iphone7
+            <select name="city" id="">
+                <option value="广州">广州</option>
+                <option selected="selected" value="深圳">深圳</option>
+                <option value="上海">上海</option>
+            </select>
+            <textarea name="intxtarea" id="" cols="30" rows="10">textarea</textarea>
+            <input type="button" value="input:button" onclick="alert('input button')">
+            <button type="button" onclick="alert('button')">button</button>
+            <input type="submit" value="submit">
+            <!-- html5 -->
+            <input list="numbs">
+            <datalist id="numbs">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </datalist>
+            <!-- html5 input -->
+            <div>html5 input:</div>
+            <input type="color" name="bg-color" id="">
+            <input type="date" name="user_data">
+            <input type="datetime" name="user_time" id="">
+            <input type="datetime-local" name="user_timelc" id="">
+            <input type="month" name="user_month" id="">
+            <input type="time" name="user_time" id="">
+            <input type="week" name="user_week" id="">
+            <input type="email" name="user_email" id="" placeholder="email">
+            <input type="number" name="user_num" id="" placeholder="number" min="0" max="999999" step="1">
+            <input type="range" name="range" id="" value="60">
+            <input type="search" name="search" id="" placeholder="search">
+            <input type="tel" name="phone" id="" placeholder="tel">
+            <input type="url" name="url" id="" placeholder="url">
+            <div>输入限制：</div>
+            <pre>
             disabled    规定输入字段应该被禁用。
             max 规定输入字段的最大值。
             maxlength   规定输入字段的最大字符数。
@@ -237,33 +243,22 @@
             size    规定输入字段的宽度（以字符计）。
             step    规定输入字段的合法数字间隔。
             value   规定输入字段的默认值。
-        </pre>
-
-
-        <input type="submit" value="submit">
-        <input type="submit" formaction="/example/html5/demo_admin.asp" formenctype="multipart/form-data" formmethod="post" formtarget="_blank"  value="以管理员身份提交" formnovalidate />
-        <input type="image" src="http://www.w3school.com.cn/i/eg_submit.jpg" alt="Submit" width="48" height="48">
-
-        Select images: <input type="file" name="img" multiple>
-
-    </fieldset>
-</form>
-
-<input type="text" name="lname" form="form1">
-
-
-<div>sj</div>
-
-
-<div style="height: 800px;"></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-
-
+            </pre>
+            <input type="submit" value="submit">
+            <input type="submit" formaction="/example/html5/demo_admin.asp" formenctype="multipart/form-data" formmethod="post" formtarget="_blank" value="以管理员身份提交" formnovalidate />
+            <input type="image" src="http://www.w3school.com.cn/i/eg_submit.jpg" alt="Submit" width="48" height="48"> Select images:
+            <input type="file" name="img" multiple>
+        </fieldset>
+    </form>
+    <input type="text" name="lname" form="form1">
+    <div>sj</div>
+    <div style="height: 800px;"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
 </body>
 
 </html>
