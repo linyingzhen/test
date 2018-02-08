@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<script>
+	(function() {
+	    var currClientWidth, fontValue, originWidth;
+	    originWidth = 750;
+	    __resize();
+	    window.addEventListener("resize", __resize, false);
+
+	    function __resize() {
+	        currClientWidth = document.documentElement.clientWidth;
+	        fontValue = ((625 * currClientWidth) / originWidth).toFixed(2);
+	        document.documentElement.style.fontSize = fontValue + "%";
+	    }
+	})();
+	</script>
+	<style>
+	* {
+	    margin: 0;
+	    padding: 0;
+	}
+	body {
+	    font-size: .3rem;
+	}
+	</style>
+</head>
+<body>
+
+	<style>
+		div {
+			background:green;
+		}
+		.box1 {
+			width: 7.5rem;
+		}
+		.box2 {
+			width: 5rem;
+		}
+		.box3 {
+			width: 1rem;
+		}
+	</style>
+
+
+	<div class="box1">div</div>
+	<div class="box2">div</div>
+	<div class="box3">div</div>
+	
+</body>
+</html>
