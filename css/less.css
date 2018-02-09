@@ -1,18 +1,1 @@
-div {
-  color: red;
-}
-p {
-  width: 1px;
-  display: none;
-}
-.box {
-  width: 2px;
-}
-.box p {
-  line-height: 2;
-}
-.divbox {
-  width: 3px;
-  color: red;
-  font-size: 16px;
-}
+div{color:#f00}p{width:1px;display:none}.box{width:2px}.box p{line-height:2}.divbox{width:3px;color:#f00;font-size:16px}
