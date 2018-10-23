@@ -1,0 +1,21 @@
+/* 750px设计稿 */
+html{
+    font-size: 13.3333vw;//(100px/750px)*100vw
+}
+/* 640px设计稿 */
+/* html{
+    font-size: 15.625vw;//(100px/640px)*100vw
+} */
+/* 1080px设计稿 */
+/* html{
+    font-size: 9.25926vw;//(100px/1080px)*100vw
+} */
+body {
+  font-size: .3rem;
+}
+
+.vwbox {
+  width: 3rem;
+  height: 4rem;
+  background: #ccc;
+}
